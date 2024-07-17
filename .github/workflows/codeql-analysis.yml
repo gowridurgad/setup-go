@@ -1,14 +1,11 @@
 name: CodeQL analysis
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: '0 3 * * 0'
+  workflow_dispatch:
 
 jobs:
   call-codeQL-analysis:
     name: CodeQL analysis
     uses: gowridurgad/reusable-workflows/.github/workflows/codeql-analysis.yml@code-ql
+    with:
+      languages: "['go']"
