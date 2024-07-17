@@ -7,5 +7,4 @@ jobs:
   call-codeQL-analysis:
     name: CodeQL analysis
     uses: gowridurgad/reusable-workflows/.github/workflows/codeql-analysis.yml@code-ql
-    with:
-      languages: "['go']"
+  
